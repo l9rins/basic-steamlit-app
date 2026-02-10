@@ -108,7 +108,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.title("Mark Lorenz")
-    sd.badge(label="Senior Technologist", variant="outline")
+    sd.badges(badge_list=[("Senior Technologist", "outline")])
     
     st.divider()
     selection = st.radio("Primary Selection", list(NAV_ITEMS.keys()), label_visibility="collapsed")
@@ -172,7 +172,7 @@ elif current_page == "Services":
                 </div>
             """, unsafe_allow_html=True)
             st.write("")
-            sd.badge(label="Enterprise Ready", variant="secondary")
+            sd.badges(badge_list=[("Enterprise Ready", "secondary")])
 
 # --- PAGE: PORTFOLIO (MASTERPIECES) ---
 elif current_page == "Portfolio":
@@ -194,7 +194,7 @@ elif current_page == "Portfolio":
     elif tab_selection == "Visual Designs":
         st.write("")
         st.info("🎨 High-resolution visual assets and 3D motion design portfolios are available upon inquiry.")
-        sd.badge(label="Design Portfolio Enabled", variant="outline")
+        sd.badges(badge_list=[("Design Portfolio Enabled", "outline")])
 
 # --- PAGE: EXPERIENCE (THE JOURNEY) ---
 elif current_page == "Experience":
@@ -221,11 +221,11 @@ elif current_page == "Experience":
     with col_r:
         st.markdown("<div class='zenith-card' style='padding: 1.5rem;'>", unsafe_allow_html=True)
         st.subheader("Credentials")
-        sd.badge(label="ISC2 Cybersecurity", variant="default")
+        sd.badges(badge_list=[("ISC2 Cybersecurity", "default")])
         st.write("")
-        sd.badge(label="GA Data Analytics", variant="default")
+        sd.badges(badge_list=[("GA Data Analytics", "default")])
         st.write("")
-        sd.badge(label="AWS Cloud Arch", variant="secondary")
+        sd.badges(badge_list=[("AWS Cloud Arch", "secondary")])
         st.markdown("</div>", unsafe_allow_html=True)
 
 # --- PAGE: CONTACT (COLLABORATE) ---
