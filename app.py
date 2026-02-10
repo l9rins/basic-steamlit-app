@@ -142,11 +142,11 @@ if current_page == "Home":
             
     with col_r:
         st.markdown("<div style='margin-top: 2rem;'>", unsafe_allow_html=True)
-        sd.metric_card(title="Solutions Shipped", value="15+", content="Industry Grade", key="metric_shipped")
+        sd.metric_card(title="Solutions Shipped", content="15+", description="Industry Grade", key="metric_shipped")
         st.write("")
-        sd.metric_card(title="Alpha Delivered", value="100%", content="Client Satisfaction", key="metric_alpha")
+        sd.metric_card(title="Alpha Delivered", content="100%", description="Client Satisfaction", key="metric_alpha")
         st.write("")
-        sd.metric_card(title="Reliability", value="99.9%", content="System Uptime", key="metric_uptime")
+        sd.metric_card(title="Reliability", content="99.9%", description="System Uptime", key="metric_uptime")
         st.markdown("</div>", unsafe_allow_html=True)
 
 # --- PAGE: SERVICES (SOLUTIONS) ---
@@ -179,7 +179,7 @@ elif current_page == "Portfolio":
     st.title("Featured Masterpieces")
     
     # Using Shadcn tabs for nested perfection
-    tab_selection = sd.tabs(tabs=["Full Systems", "Visual Designs"], key="portfolio_tabs")
+    tab_selection = sd.tabs(options=["Full Systems", "Visual Designs"], key="portfolio_tabs")
     
     if tab_selection == "Full Systems":
         st.write("")
