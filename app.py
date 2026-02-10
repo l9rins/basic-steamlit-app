@@ -108,7 +108,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     st.title("Mark Lorenz")
-    sd.badges(badge_list=[("Senior Technologist", "outline")])
+    sd.badges(badge_list=[("Senior Technologist", "outline")], key="main_badge")
     
     st.divider()
     selection = st.radio("Primary Selection", list(NAV_ITEMS.keys()), label_visibility="collapsed")
@@ -133,7 +133,7 @@ if current_page == "Home":
         st.markdown("### I specialize in **Scale**, **Security**, and **High-Frequency Visuals**.")
         
         st.write("")
-        sd.card(title="Value Proposition", content="Every solution I engineer is built on a foundation of zero-error logic and distinctive brand identity. I deliver products that operate at the edge of possibility.", description="Executive Tier Partnership")
+        sd.card(title="Value Proposition", content="Every solution I engineer is built on a foundation of zero-error logic and distinctive brand identity. I deliver products that operate at the edge of possibility.", description="Executive Tier Partnership", key="hero_card")
         
         st.write("")
         if st.button("Initiate Collaboration ➝"):
@@ -142,11 +142,11 @@ if current_page == "Home":
             
     with col_r:
         st.markdown("<div style='margin-top: 2rem;'>", unsafe_allow_html=True)
-        sd.metric_card(title="Solutions Shipped", value="15+", content="Industry Grade", mode="standard")
+        sd.metric_card(title="Solutions Shipped", value="15+", content="Industry Grade", key="metric_shipped")
         st.write("")
-        sd.metric_card(title="Alpha Delivered", value="100%", content="Client Satisfaction", mode="standard")
+        sd.metric_card(title="Alpha Delivered", value="100%", content="Client Satisfaction", key="metric_alpha")
         st.write("")
-        sd.metric_card(title="Reliability", value="99.9%", content="System Uptime", mode="standard")
+        sd.metric_card(title="Reliability", value="99.9%", content="System Uptime", key="metric_uptime")
         st.markdown("</div>", unsafe_allow_html=True)
 
 # --- PAGE: SERVICES (SOLUTIONS) ---
@@ -172,7 +172,7 @@ elif current_page == "Services":
                 </div>
             """, unsafe_allow_html=True)
             st.write("")
-            sd.badges(badge_list=[("Enterprise Ready", "secondary")])
+            sd.badges(badge_list=[("Enterprise Ready", "secondary")], key=f"service_badge_{i}")
 
 # --- PAGE: PORTFOLIO (MASTERPIECES) ---
 elif current_page == "Portfolio":
@@ -185,16 +185,16 @@ elif current_page == "Portfolio":
         st.write("")
         c_p1, c_p2 = st.columns(2)
         with c_p1:
-            sd.card(title="TradeMate CRM", content="The industry standard for tradesperson revenue management.", description="Java | Spring Boot | React")
+            sd.card(title="TradeMate CRM", content="The industry standard for tradesperson revenue management.", description="Java | Spring Boot | React", key="p1_card")
             st.button("Explore Case Study", key="tm_s")
         with c_p2:
-            sd.card(title="HIMO Ecosystem", content="A suite of AI-driven tools for high-frequency freelancer success.", description="Python | OpenAI | Streamlit")
+            sd.card(title="HIMO Ecosystem", content="A suite of AI-driven tools for high-frequency freelancer success.", description="Python | OpenAI | Streamlit", key="p2_card")
             st.button("Explore Case Study", key="himo_s")
             
     elif tab_selection == "Visual Designs":
         st.write("")
         st.info("🎨 High-resolution visual assets and 3D motion design portfolios are available upon inquiry.")
-        sd.badges(badge_list=[("Design Portfolio Enabled", "outline")])
+        sd.badges(badge_list=[("Design Portfolio Enabled", "outline")], key="design_badge")
 
 # --- PAGE: EXPERIENCE (THE JOURNEY) ---
 elif current_page == "Experience":
@@ -221,11 +221,11 @@ elif current_page == "Experience":
     with col_r:
         st.markdown("<div class='zenith-card' style='padding: 1.5rem;'>", unsafe_allow_html=True)
         st.subheader("Credentials")
-        sd.badges(badge_list=[("ISC2 Cybersecurity", "default")])
+        sd.badges(badge_list=[("ISC2 Cybersecurity", "default")], key="cert_isc2")
         st.write("")
-        sd.badges(badge_list=[("GA Data Analytics", "default")])
+        sd.badges(badge_list=[("GA Data Analytics", "default")], key="cert_ga")
         st.write("")
-        sd.badges(badge_list=[("AWS Cloud Arch", "secondary")])
+        sd.badges(badge_list=[("AWS Cloud Arch", "secondary")], key="cert_aws")
         st.markdown("</div>", unsafe_allow_html=True)
 
 # --- PAGE: CONTACT (COLLABORATE) ---
